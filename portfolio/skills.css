@@ -1,0 +1,256 @@
+body{
+    background-image: url('background.jpg');
+    background-size: cover;  /* Ensure the background covers the screen */
+    background-position: center;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin:50px;
+}
+@media (max-width: 576px) {
+    body {
+        margin: 10px; /* Reduce margin */
+        padding: 10px; /* Add padding */
+    }
+
+    h1, h2, h4 {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+        text-align: center;
+    }
+
+    .tech-logos {
+        flex-direction: column; /* Stack cards vertically */
+        gap: 10px;
+    }
+
+    .tech-card {
+        max-width: 100%; /* Full width for mobile */
+    }
+
+    .dropdown-content {
+        background-color: black; /* Change dropdown background */
+        color: white; /* White text for dropdown */
+    }
+
+    .dropdown-content a:hover {
+        background-color: #333; /* Dark gray hover background for mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        margin: 20px; /* Smaller margin */
+        padding: 15px;
+    }
+
+    h1, h2, h4 {
+        font-size: 1.8rem; /* Adjust font size for tablets */
+        text-align: center;
+    }
+
+    .tech-logos {
+        flex-direction: row; /* Display cards in a row */
+        gap: 20px;
+        flex-wrap: wrap; /* Ensure wrapping of cards */
+    }
+
+    .tech-card {
+        max-width: 48%; /* Adjust card width for tablets */
+    }
+
+    .dropdown-content {
+        background-color: black; /* Change dropdown background */
+        color: white; /* White text for dropdown */
+    }
+
+    .dropdown-content a:hover {
+        background-color: #444; /* Darker hover background for tablets */
+    }
+}
+
+@media (min-width: 769px) {
+    h1 {
+        font-size: 2.5rem; /* Larger heading size */
+    }
+
+    .tech-logos {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 30px;
+    }
+
+    .tech-card {
+        max-width: 200px; /* Fixed width for larger screens */
+    }
+}
+
+
+.header{
+    margin: 0px;
+
+}
+.dropdown {
+    float: right;
+    overflow: hidden;
+    margin: 0px;
+    background-color: rgba(104, 105, 105, 0); 
+}
+  
+.dropdown .dropbtn {
+    font-size: 16px; 
+
+    border: none;
+    outline: none;
+    color: white;
+    padding: 4px 6px;
+    background: none;
+    font-family: inherit;
+    margin: 0px;
+}
+  
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.637) 0%, rgba(255, 255, 255, 0.055) 60%);
+    transition: background-color 0.3s ease;
+    border: none;
+    padding: 20px;
+    border-radius: 50%;
+    margin-left: 50px;
+}
+  
+.dropdown-content {
+   
+    
+    display: none;
+    position: absolute;
+    background: none;
+    color: white;
+    min-width: 160px;
+    
+    
+}
+  
+.dropdown-content a {
+    float: left;
+    color:white;
+    padding: 15px 16px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    right: 0s;
+}
+  
+.dropdown-content a:hover {
+
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.116) 0%, rgba(255, 255, 255, 0.247) 60%);
+}
+  
+.dropdown:hover .dropdown-content {
+    background:rgba(29, 0, 29, 0.873);
+    border-radius: 40px;
+    display: block;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    max-width: 1200px;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+.section {
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.tech-logos {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tech-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tech-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.tech-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.tech-card p {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+}
+
+.tech-card:hover {
+    transform: scale(1.25);
+}
+
+.icon {
+    position: relative;
+    cursor: pointer;
+    color: white;
+    margin-bottom: 5px;  /* Reduce bottom margin */
+}
+
+.hover-info {
+    border: 2px ridge white;
+    display: none;
+    position: absolute;
+    background-color: rgba(1, 1, 31, 0.743);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    top: 50%;  /* Center vertically */
+    transform: translateY(-50%);  /* Offset for vertical centering */
+    left: 35px;
+    white-space: nowrap;
+}
+
+
+.icon:hover .hover-info {
+    display: block;
+}
+
+.copy-btn {
+    background-color: rgba(47, 1, 47, 0.497);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
